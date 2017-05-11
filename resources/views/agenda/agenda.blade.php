@@ -17,12 +17,12 @@
     <div class="col-sm-4">
       <h3>Zaterdag 17 December</h3>
       <p>Wilt u het overzicht zien van onze conferentie op Zaterdag?</p>
-      <a href="https://conferentie-justsomeguy.c9users.io/agenda/zaterdag">Overzicht Zaterdag >></a>
+      <a href="{{route('zaterdag')}}">Overzicht Zaterdag >></a>
     </div>
     <div class="col-sm-4">
       <h3>Zondag 18 December</h3>
       <p>Wilt u het overzicht zien van onze conferentie op Zondag?</p>
-      <a href="https://conferentie-justsomeguy.c9users.io/agenda/zondag">Overzicht Zondag >></a>
+      <a href="{{route('zondag')}}">Overzicht Zondag >></a>
     </div>
   </div>
 </div>
