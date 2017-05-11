@@ -17,7 +17,7 @@ class CreateSlottagsTable extends Migration
             $table->integer('idSlot')->unsigned();
             $table->foreign('idSlot')->references('id')->on('slots');
             $table->integer('idTag')->unsigned();
-            $table->foreign('idTag')->references('idTag')->on('tags');
+            $table->foreign('idTag')->references('id')->on('tags');
         });
     }
 
