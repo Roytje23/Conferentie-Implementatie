@@ -12,13 +12,6 @@ class AanmeldingTableSeeder extends Seeder
      */
     public function run()
     {
-        $aanmelding = new Aanmelding();
-        $aanmelding->idSlot = 4;
-        $aanmelding->idUser = 1;
-        $aanmelding->onderwerp = "Templates";
-        $aanmelding->omschrijving = "So many choices!!";
-        $aanmelding->wensen = "Stoel";
-        $aanmelding->voorkeur = 3;
-        $aanmelding->save();
+
     }
 }
