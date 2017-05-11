@@ -13,7 +13,7 @@ class CreateZaalsTable extends Migration
     public function up()
     {
         Schema::create('zaals', function (Blueprint $table){
-           $table->increments('idZaal');
+           $table->increments('id');
            $table->string('zaalnaam');
         });
     }
