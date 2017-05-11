@@ -23,7 +23,7 @@
         </thead>
                 @foreach($slots as $slot)
                 @foreach($statuses as $status)
-                @if($slot->dag == "Vrijdag" && $slot->idStatus == $status->idStatus)
+                @if($slot->dag == "Vrijdag" && $slot->id == $status->id)
                 <tr>
                     <td>
                         @if($slot->idStatus == 3)
