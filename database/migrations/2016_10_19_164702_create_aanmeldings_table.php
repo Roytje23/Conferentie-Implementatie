@@ -21,7 +21,7 @@ class CreateAanmeldingsTable extends Migration
             $table->string('onderwerp');
             $table->string('omschrijving');
             $table->string('wensen');
-            $table->integer('voorkeur')->unsigned()->nullable();
+            $table->integer('voorkeur')->nullable()->unsigned();
             $table->foreign('voorkeur')->references('id')->on('slots');
             $table->timestamps();
         });

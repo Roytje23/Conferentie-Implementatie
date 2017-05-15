@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+ 
 @section('content')
 
 <?php $sloten1 = DB::table('slots')->where('idStatus', 1)->get(); ?>
