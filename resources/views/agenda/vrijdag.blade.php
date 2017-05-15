@@ -23,7 +23,7 @@
         </thead>
                 @foreach($slots as $slot)
                 @foreach($statuses as $status)
-                @if($slot->dag == "Vrijdag" && $slot->id == $status->id)
+                @if($slot->dag == "Vrijdag")
                 <tr>
                     <td>
                         @if($slot->idStatus == 3)
@@ -38,7 +38,13 @@
                         @endif
                         </td>    
                     <td>
-                
+                      @if($slot->idStatus == 3)
+                        <?php $slot_tag = DB::table('slot_tags')->where('idSlot', $slot->id)->get(); ?>
+                        @foreach($slot_tag as $taggie)
+                        <?php $tag = DB::table('tags')->where('id', $taggie->idTag)->first(); ?>
+                        {{ $tag->tag }} |
+                        @endforeach
+                        @endif
                         </td>    
                     <td>{{ $slot->beginTijd}}</td>
                     <td>{{ $slot->eindTijd}}</td>
