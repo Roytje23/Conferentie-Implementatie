@@ -23,8 +23,7 @@
             </tr>
         </thead>
                 @foreach($slots as $slot)
-                @foreach($statuses as $status)
-                @if($slot->dag == "Zaterdag" && $slot->id == $status->id)
+                @if($slot->dag == "Zaterdag")
                 <tr>
                     <td>
                         @if($slot->idStatus == 3)
@@ -50,10 +49,10 @@
                     <td>{{ $slot->beginTijd}}</td>
                     <td>{{ $slot->eindTijd}}</td>
                     <td>{{ $slot->idZaal}}</td>
-                    <td>{{ $status->status}}</td>
+                    <?php $royStatus = DB::table('statuses')->where('id', $slot->idStatus)->first(); ?>
+                    <td>{{ $royStatus->status }}</td>
                 </tr>
                 @endif
-                @endforeach
                 @endforeach
       </table>
     </div>
