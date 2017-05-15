@@ -28,7 +28,7 @@
             <td>
                 <select name="tag1" class="tag1">
                     @foreach($tags as $tag)
-                            <option value="{{ $tag->idTag }}">ID: {{ $tag->idTag }} | Tag:{{ $tag->tag }}</option>
+                            <option value="{{ $tag->idTag }}">ID: {{ $tag->id }} | Tag:{{ $tag->tag }}</option>
                     @endforeach
                 </select>
             </td>
@@ -38,7 +38,7 @@
             <td>
                 <select name="tag2" class="tag2">
                     @foreach($tags as $tag)
-                            <option value="{{ $tag->idTag }}">ID: {{ $tag->idTag }} | Tag:{{ $tag->tag }}</option>
+                            <option value="{{ $tag->idTag }}">ID: {{ $tag->id }} | Tag:{{ $tag->tag }}</option>
                     @endforeach
                 </select>
             </td>
@@ -48,7 +48,7 @@
             <td>
                 <select name="tag3" class="tag3">
                     @foreach($tags as $tag)
-                            <option value="{{ $tag->idTag }}">ID: {{ $tag->idTag }} | Tag:{{ $tag->tag }}</option>
+                            <option value="{{ $tag->idTag }}">ID: {{ $tag->id }} | Tag:{{ $tag->tag }}</option>
                     @endforeach
                 </select>
             </td>

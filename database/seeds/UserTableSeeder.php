@@ -32,6 +32,8 @@ class UserTableSeeder extends Seeder
         $user->telnummer = "0675758484";
         $user->adres = "Randomstraat 12";
         $user->woonplaats = "Berghem";
+        $user->gebruikersnaam = "Rob";
+        $user->password = bcrypt("admin");        
         $user->rol = "bezoeker";
         $user->save();
     }
