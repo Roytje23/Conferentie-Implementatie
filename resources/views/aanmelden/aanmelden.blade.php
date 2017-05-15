@@ -116,7 +116,7 @@ Beschikbare Sloten:
             @foreach($slotenVoorkeur as $slotVoorkeur)
             @if($slotVoorkeur->dag == "Vrijdag")
             <tr>
-                <td><input type="radio" name="slot" value="{{ $slotVoorkeur->id }}"></td>
+                <td><input type="radio" name="slotvoorkeur" value="{{ $slotVoorkeur->id }}"></td>
                 <td>{{ $slotVoorkeur->dag }}</td>
                 <td>{{ $slotVoorkeur->beginTijd }} </td>
                 <td>{{ $slotVoorkeur->eindTijd }}</td>
@@ -131,7 +131,7 @@ Beschikbare Sloten:
             @foreach($slotenVoorkeur as $slotVoorkeur)
             @if($slotVoorkeur->dag == "Zaterdag")
             <tr>
-                <td><input type="radio" name="slot" value="{{ $slotVoorkeur->id }}"></td>
+                <td><input type="radio" name="slotvoorkeur" value="{{ $slotVoorkeur->id }}"></td>
                 <td>{{ $slotVoorkeur->dag }}</td>
                 <td>{{ $slotVoorkeur->beginTijd }} </td>
                 <td>{{ $slotVoorkeur->eindTijd }}</td>
@@ -146,7 +146,7 @@ Beschikbare Sloten:
             @foreach($slotenVoorkeur as $slotVoorkeur)
             @if($slotVoorkeur->dag == "Zondag")
             <tr>
-                <td><input type="radio" name="slot" value="{{ $slotVoorkeur->id }}"></td>
+                <td><input type="radio" name="slotvoorkeur" value="{{ $slotVoorkeur->id }}"></td>
                 <td>{{ $slotVoorkeur->dag }}</td>
                 <td>{{ $slotVoorkeur->beginTijd }} </td>
                 <td>{{ $slotVoorkeur->eindTijd }}</td>

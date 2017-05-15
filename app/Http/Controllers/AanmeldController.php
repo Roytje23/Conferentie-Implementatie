@@ -39,7 +39,7 @@ public function postAanmelding(Request $request)
         $aanmelding->onderwerp = $request["onderwerp"];
         $aanmelding->omschrijving = $request["omschrijving"];
         $aanmelding->wensen = $request["wensen"];
-        $aanmelding->voorkeur = $request["slot-voorkeur"];
+        $aanmelding->voorkeur = $request["slotvoorkeur"];
         $aanmelding->save();
         
         
