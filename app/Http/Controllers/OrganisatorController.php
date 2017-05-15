@@ -19,7 +19,7 @@ class OrganisatorController extends Controller
 {
     public function postacceptaanmelding(Request $request)
     {
-        $aanmeldingsId = DB::table('aanmeldings')->where('idAanmelding', $request["aanmelding"])->first();
+        $aanmeldingsId = DB::table('aanmeldings')->where('id', $request["aanmelding"])->first();
         DB::table('slots')->where('id', $aanmeldingsId->idSlot)->update(['idStatus' => 3]);
         
         $idSlot = DB::table('slots')->where('id', $aanmeldingsId->idSlot)->first();
