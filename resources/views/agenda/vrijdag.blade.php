@@ -22,7 +22,7 @@
             </tr>
         </thead>
                 @foreach($slots as $slot)
-                <!--@foreach($statuses as $status)-->
+                @foreach($statuses as $status)
                 @if($slot->dag == "Vrijdag")
                 <tr>
                     <td>
@@ -53,7 +53,7 @@
                 </tr>
                 @endif
                 @endforeach
-                <!--@endforeac-->
+                @endforeach
     </table>
     </div>
   </div>
