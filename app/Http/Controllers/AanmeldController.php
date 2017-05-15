@@ -33,6 +33,7 @@ public function postAanmelding(Request $request)
         $user->save();
         
         $aanmelding = new Aanmelding();
+        $aanmelding->id = DB::table('aanmeldings')->max('id') + 1;
         $aanmelding->idSlot = $request["slot"];
         $aanmelding->idUser = $user->id;
         $aanmelding->onderwerp = $request["onderwerp"];
