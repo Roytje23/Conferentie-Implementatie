@@ -38,13 +38,7 @@
                         @endif
                         </td>    
                     <td>
-                        @if($slot->idStatus == 3)
-                        <?php $slot_tag = DB::table('slot_tags')->where('idSlot', $slot->id)->get(); ?>
-                        @foreach($slot_tag as $taggie)
-                        <?php $tag = DB::table('tags')->where('id', $taggie->idTag)->first(); ?>
-                        {{ $tag->tag }} |
-                        @endforeach
-                        @endif
+                
                         </td>    
                     <td>{{ $slot->beginTijd}}</td>
                     <td>{{ $slot->eindTijd}}</td>
