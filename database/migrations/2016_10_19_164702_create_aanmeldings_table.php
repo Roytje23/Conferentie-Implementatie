@@ -13,7 +13,7 @@ class CreateAanmeldingsTable extends Migration
     public function up()
     {
         Schema::create('aanmeldings', function (Blueprint $table) {
-            $table->increments('idAanmelding');
+            $table->increments('id');
             $table->integer('idSlot')->unsigned();
             $table->foreign('idSlot')->references('id')->on('slots');
             $table->integer('idUser')->unsigned();
