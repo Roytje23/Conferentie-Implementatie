@@ -17,7 +17,7 @@
                         <?php $aanvraagUser = DB::table('users')->where('id', $aanmelding->idUser)->get(); ?>
                         <?php $slotStatus = DB::table('slots')->where('id', $aanmelding->idSlot)->get(); ?>
                         @if ($slotStatus[0]->idStatus == 2)
-                            <option value="{{ $aanmelding->idAanmelding }}">IDslot: {{ $aanmelding->idSlot }} Naam:{{ $aanvraagUser[0]->naam }} - Onderwerp:{{ $aanmelding->onderwerp }}</option>
+                            <option value="{{ $aanmelding->id }}">IDslot: {{ $aanmelding->idSlot }} Naam:{{ $aanvraagUser[0]->naam }} - Onderwerp:{{ $aanmelding->onderwerp }}</option>
                         @endif
                     @endforeach
                 </select>
@@ -28,7 +28,7 @@
             <td>
                 <select name="tag1" class="tag1">
                     @foreach($tags as $tag)
-                            <option value="{{ $tag->idTag }}">ID: {{ $tag->id }} | Tag:{{ $tag->tag }}</option>
+                            <option value="{{ $tag->id }}">ID: {{ $tag->idTag }} | Tag:{{ $tag->tag }}</option>
                     @endforeach
                 </select>
             </td>
@@ -38,7 +38,7 @@
             <td>
                 <select name="tag2" class="tag2">
                     @foreach($tags as $tag)
-                            <option value="{{ $tag->idTag }}">ID: {{ $tag->id }} | Tag:{{ $tag->tag }}</option>
+                            <option value="{{ $tag->id }}">ID: {{ $tag->idTag }} | Tag:{{ $tag->tag }}</option>
                     @endforeach
                 </select>
             </td>
@@ -48,7 +48,7 @@
             <td>
                 <select name="tag3" class="tag3">
                     @foreach($tags as $tag)
-                            <option value="{{ $tag->idTag }}">ID: {{ $tag->id }} | Tag:{{ $tag->tag }}</option>
+                            <option value="{{ $tag->id }}">ID: {{ $tag->idTag }} | Tag:{{ $tag->tag }}</option>
                     @endforeach
                 </select>
             </td>
