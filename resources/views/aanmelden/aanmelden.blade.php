@@ -10,6 +10,7 @@
 <br>
 Beschikbare Sloten:
 <form  method="post" action='{{route('postaanmelding')}}' id='reserveren'>
+        {{ crf_field()}}
         <div class ="vrijdag-group col-md-12">
         <table>
             <tbody>
