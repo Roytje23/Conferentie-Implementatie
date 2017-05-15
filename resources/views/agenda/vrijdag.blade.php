@@ -48,7 +48,8 @@
                     <td>{{ $slot->beginTijd}}</td>
                     <td>{{ $slot->eindTijd}}</td>
                     <td>{{ $slot->idZaal}}</td>
-                    <td>{{ $slot->idStatus}}</td>
+                    <?php $royStatus = DB::table('statuses')->where('id', $slot->idStatus)->first(); ?>
+                    <td>{{ $royStatus }}</td>
                 </tr>
                 @endif
                 @endforeach
