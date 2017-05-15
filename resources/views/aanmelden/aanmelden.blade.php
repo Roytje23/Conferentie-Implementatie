@@ -10,7 +10,6 @@
 <br>
 Beschikbare Sloten:
 <form  method="post" action='{{route('postaanmelding')}}' id='reserveren'>
-        {{ csrf_field()}}
         <div class ="vrijdag-group col-md-12">
         <table>
             <tbody>
@@ -116,7 +115,7 @@ Beschikbare Sloten:
             @foreach($slotenVoorkeur as $slotVoorkeur)
             @if($slotVoorkeur->dag == "Vrijdag")
             <tr>
-                <td><input type="radio" name="slotvoorkeur" value="{{ $slotVoorkeur->id }}"></td>
+                <td><input type="radio" name="slotvoorkeur" value="{{ $slotvoorkeur->id }}"></td>
                 <td>{{ $slotVoorkeur->dag }}</td>
                 <td>{{ $slotVoorkeur->beginTijd }} </td>
                 <td>{{ $slotVoorkeur->eindTijd }}</td>
@@ -131,7 +130,7 @@ Beschikbare Sloten:
             @foreach($slotenVoorkeur as $slotVoorkeur)
             @if($slotVoorkeur->dag == "Zaterdag")
             <tr>
-                <td><input type="radio" name="slotvoorkeur" value="{{ $slotVoorkeur->id }}"></td>
+                <td><input type="radio" name="slotvoorkeur" value="{{ $slotvoorkeur->id }}"></td>
                 <td>{{ $slotVoorkeur->dag }}</td>
                 <td>{{ $slotVoorkeur->beginTijd }} </td>
                 <td>{{ $slotVoorkeur->eindTijd }}</td>
@@ -146,7 +145,7 @@ Beschikbare Sloten:
             @foreach($slotenVoorkeur as $slotVoorkeur)
             @if($slotVoorkeur->dag == "Zondag")
             <tr>
-                <td><input type="radio" name="slotvoorkeur" value="{{ $slotVoorkeur->id }}"></td>
+                <td><input type="radio" name="slotvoorkeur" value="{{ $slotvoorkeur->id }}"></td>
                 <td>{{ $slotVoorkeur->dag }}</td>
                 <td>{{ $slotVoorkeur->beginTijd }} </td>
                 <td>{{ $slotVoorkeur->eindTijd }}</td>
@@ -161,9 +160,8 @@ Beschikbare Sloten:
                 <td><button type="submit" class="btn">Bevestigen</button></td>
                 <td>@include('includes.errorbox')</td>
             </tr>
-
             <tr>
-                <td><input type="hidden" name="_token" value="{{ Session::token() }}"/></td>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <td></td>
             </tr>
     </form>
