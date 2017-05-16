@@ -12,8 +12,7 @@
             </tr>
         </thead>
                 @foreach($slots as $slot)
-                @foreach($statuses as $status)
-                @if($slot->dag == "Vrijdag" && $slot->idStatus == $status->idStatus)
+                @if($slot->dag == "Vrijdag")
                 <tr>
                     <td>
                         @if($slot->idStatus == 3)
@@ -31,7 +30,7 @@
                         @if($slot->idStatus == 3)
                         <?php $slot_tag = DB::table('slot_tags')->where('idSlot', $slot->id)->get(); ?>
                         @foreach($slot_tag as $taggie)
-                        <?php $tag = DB::table('tags')->where('idTag', $taggie->idTag)->first(); ?>
+                        <?php $tag = DB::table('tags')->where('id', $taggie->id)->first(); ?>
                         {{ $tag->tag }} |
                         @endforeach
                         @endif
@@ -39,7 +38,8 @@
                     <td>{{ $slot->beginTijd}}</td>
                     <td>{{ $slot->eindTijd}}</td>
                     <td>{{ $slot->idZaal}}</td>
-                    <td>{{ $status->status}}</td>
+                    <?php $royStatus = DB::table('statuses')->where('id', $slot->idStatus)->first(); ?>
+                    <td>{{ $royStatus->status }}</td>
                 </tr>
                 @endif
                 @endforeach
@@ -66,8 +66,7 @@
             </tr>
         </thead>
                 @foreach($slots as $slot)
-                @foreach($statuses as $status)
-                @if($slot->dag == "Zaterdag" && $slot->idStatus == $status->idStatus)
+                @if($slot->dag == "Zaterdag")
                 <tr>
                     <td>
                         @if($slot->idStatus == 3)
@@ -85,7 +84,7 @@
                         @if($slot->idStatus == 3)
                         <?php $slot_tag = DB::table('slot_tags')->where('idSlot', $slot->id)->get(); ?>
                         @foreach($slot_tag as $taggie)
-                        <?php $tag = DB::table('tags')->where('idTag', $taggie->idTag)->first(); ?>
+                        <?php $tag = DB::table('tags')->where('id', $taggie->id)->first(); ?>
                         {{ $tag->tag }} |
                         @endforeach
                         @endif
@@ -93,7 +92,8 @@
                     <td>{{ $slot->beginTijd}}</td>
                     <td>{{ $slot->eindTijd}}</td>
                     <td>{{ $slot->idZaal}}</td>
-                    <td>{{ $status->status}}</td>
+                    <?php $royStatus = DB::table('statuses')->where('id', $slot->idStatus)->first(); ?>
+                    <td>{{ $royStatus->status }}</td>
                 </tr>
                 @endif
                 @endforeach
@@ -115,8 +115,7 @@
             </tr>
         </thead>
                 @foreach($slots as $slot)
-                @foreach($statuses as $status)
-                @if($slot->dag == "Zondag" && $slot->idStatus == $status->idStatus)
+                @if($slot->dag == "Zondag")
                 <tr>
                     <td>
                         @if($slot->idStatus == 3)
@@ -134,7 +133,7 @@
                         @if($slot->idStatus == 3)
                         <?php $slot_tag = DB::table('slot_tags')->where('idSlot', $slot->id)->get(); ?>
                         @foreach($slot_tag as $taggie)
-                        <?php $tag = DB::table('tags')->where('idTag', $taggie->idTag)->first(); ?>
+                        <?php $tag = DB::table('tags')->where('id', $taggie->id)->first(); ?>
                         {{ $tag->tag }} |
                         @endforeach
                         @endif
@@ -142,7 +141,8 @@
                     <td>{{ $slot->beginTijd}}</td>
                     <td>{{ $slot->eindTijd}}</td>
                     <td>{{ $slot->idZaal}}</td>
-                    <td>{{ $status->status}}</td>
+                    <?php $royStatus = DB::table('statuses')->where('id', $slot->idStatus)->first(); ?>
+                    <td>{{ $royStatus->status }}</td>
                 </tr>
                 @endif
                 @endforeach
