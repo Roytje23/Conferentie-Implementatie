@@ -43,7 +43,6 @@
                 </tr>
                 @endif
                 @endforeach
-                @endforeach
     </table><br>
     <br><br><br>
     <br><br><br>
@@ -97,7 +96,6 @@
                 </tr>
                 @endif
                 @endforeach
-                @endforeach
       </table><br>
       <br>
       <br>
@@ -145,6 +143,5 @@
                     <td>{{ $royStatus->status }}</td>
                 </tr>
                 @endif
-                @endforeach
                 @endforeach
       </table>
