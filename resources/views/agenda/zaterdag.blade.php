@@ -22,7 +22,7 @@
               <th>Status</th>
             </tr>
         </thead>
-                @foreach($slots->orderBy('id', 'desc') as $slot)
+                @foreach($slots as $slot)
                 @if($slot->dag == "Zaterdag")
                 <tr>
                     <td>
