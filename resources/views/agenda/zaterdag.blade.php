@@ -22,7 +22,7 @@
               <th>Status</th>
             </tr>
         </thead>
-                @foreach($slots as $slot)
+                @foreach($slots->sortBy('id') as $slot)
                 @if($slot->dag == "Zaterdag")
                 <tr>
                     <td>
@@ -48,7 +48,9 @@
                         </td>   
                     <td>{{ $slot->beginTijd}}</td>
                     <td>{{ $slot->eindTijd}}</td>
-                    <td>{{ $slot->idZaal}}</td>
+                    <td>{{ $slot->idZaal}}</td>                    
+                    <?php <!--$royStatus = DB::table('statuses')->where('id', $slot->idStatus)->first(); ?>
+                    <td>{{ $royStatus->status }}</td>
                 </tr>
                 @endif
                 @endforeach
@@ -57,3 +59,4 @@
   </div>
 </div>
 @endsection
+http://agile-citadel-48370.herokuapp.com/agenda/zaterdag
