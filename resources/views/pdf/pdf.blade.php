@@ -1,5 +1,9 @@
 <center><h2>E-Tickets</h2></center><br>
 
+            <tr>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <td></td>
+            </tr>
 
 @foreach($ticketarray as $ticket)
     <center><h3>QR-code Ticket</h3></center>
