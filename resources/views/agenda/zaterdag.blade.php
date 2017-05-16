@@ -59,4 +59,3 @@
   </div>
 </div>
 @endsection
-http://agile-citadel-48370.herokuapp.com/agenda/zaterdag
