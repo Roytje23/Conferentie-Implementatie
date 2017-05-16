@@ -49,7 +49,7 @@
                     <td>{{ $slot->beginTijd}}</td>
                     <td>{{ $slot->eindTijd}}</td>
                     <td>{{ $slot->idZaal}}</td>                    
-                    <?php <!--$royStatus = DB::table('statuses')->where('id', $slot->idStatus)->first(); ?>
+                    <?php $royStatus = DB::table('statuses')->where('id', $slot->idStatus)->first(); ?>
                     <td>{{ $royStatus->status }}</td>
                 </tr>
                 @endif
