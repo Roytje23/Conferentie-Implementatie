@@ -112,7 +112,7 @@ Beschikbare Sloten:
           <div class ="vrijdag-group col-md-12">
         <table>
             <tbody>
-            <td><input type="dropdown-menu" name="slotvoorkeur" value="0"></td>
+            <td><input type="radio" name="slotvoorkeur" value="0"></td>
             @foreach($slotenVoorkeur as $slotVoorkeur)
             @if($slotVoorkeur->dag == "Vrijdag")
             <tr>
