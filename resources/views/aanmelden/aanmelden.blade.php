@@ -131,7 +131,7 @@ Beschikbare Sloten:
             @foreach($slotenVoorkeur as $slotVoorkeur)
             @if($slotVoorkeur->dag == "Zaterdag")
             <tr>
-                <td><input type="radio" name="slotvoorkeur" value="{{ $slotvoorkeur->id }}"></td>
+                <td><input type="radio" name="slotvoorkeur" value="{{ $slotVoorkeur->id }}"></td>
                 <td>{{ $slotVoorkeur->dag }}</td>
                 <td>{{ $slotVoorkeur->beginTijd }} </td>
                 <td>{{ $slotVoorkeur->eindTijd }}</td>
