@@ -305,7 +305,7 @@ $(function(){
                 </select>
             </div> 
             <button type="submit" class="btn">Bevestigen</button>
-            <input type="hidden" name="_token" value="{{Session::token()}}"/>
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
         </form>
 </section>
 
